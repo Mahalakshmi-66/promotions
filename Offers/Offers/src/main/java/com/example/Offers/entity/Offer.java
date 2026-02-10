@@ -1,4 +1,4 @@
-package com.example.offerservice.domain;
+package com.example.Offers.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -62,5 +62,30 @@ public class Offer {
     }
 
     // Getters & Setters
-    // (Include or use Lombok)
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
+
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
+    public Integer getCostPoints() { return costPoints; }
+    public void setCostPoints(Integer costPoints) { this.costPoints = costPoints; }
+
+    public LocalDate getStartDate() { return startDate; }
+    public void setStartDate(LocalDate startDate) { this.startDate = startDate; }
+
+    public LocalDate getEndDate() { return endDate; }
+    public void setEndDate(LocalDate endDate) { this.endDate = endDate; }
+
+    public String getTierLevel() { return tierLevel; }
+    public void setTierLevel(String tierLevel) { this.tierLevel = tierLevel; }
+
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

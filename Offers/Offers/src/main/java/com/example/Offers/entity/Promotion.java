@@ -1,4 +1,4 @@
-package com.example.promotionservice.domain;
+package com.example.Offers.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

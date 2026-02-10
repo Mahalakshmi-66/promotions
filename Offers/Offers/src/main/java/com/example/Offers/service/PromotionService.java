@@ -1,7 +1,7 @@
-package com.example.promotionservice.service;
+package com.example.Offers.service;
 
-import com.example.promotionservice.api.dto.PromotionRequest;
-import com.example.promotionservice.api.dto.PromotionResponse;
+import com.example.Offers.dto.PromotionRequest;
+import com.example.Offers.dto.PromotionResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,4 +1,4 @@
-package com.example.OfferService.api.dto;
+package com.example.Offers.dto;
 
 import java.time.LocalDate;
 

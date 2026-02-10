@@ -1,11 +1,11 @@
-package com.example.promotionservice.service.impl;
+package com.example.Offers.service.impl;
 
-import com.example.promotionservice.api.dto.PromotionRequest;
-import com.example.promotionservice.api.dto.PromotionResponse;
-import com.example.promotionservice.api.mapper.PromotionMapper;
-import com.example.promotionservice.domain.Promotion;
-import com.example.promotionservice.repository.PromotionRepository;
-import com.example.promotionservice.service.PromotionService;
+import com.example.Offers.dto.PromotionRequest;
+import com.example.Offers.dto.PromotionResponse;
+import com.example.Offers.mapper.PromotionMapper;
+import com.example.Offers.entity.Promotion;
+import com.example.Offers.repository.PromotionRepository;
+import com.example.Offers.service.PromotionService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

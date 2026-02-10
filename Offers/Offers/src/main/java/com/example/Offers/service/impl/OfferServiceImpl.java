@@ -1,10 +1,10 @@
-package com.example.offerservice.service.impl;
+package com.example.Offers.service.impl;
 
-import com.example.offerservice.api.dto.*;
-import com.example.offerservice.api.mapper.OfferMapper;
-import com.example.offerservice.domain.Offer;
-import com.example.offerservice.repository.OfferRepository;
-import com.example.offerservice.service.OfferService;
+import com.example.Offers.dto.*;
+import com.example.Offers.mapper.OfferMapper;
+import com.example.Offers.entity.Offer;
+import com.example.Offers.repository.OfferRepository;
+import com.example.Offers.service.OfferService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

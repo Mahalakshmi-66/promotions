@@ -1,7 +1,7 @@
-package com.example.promotionservice.api.mapper;
+package com.example.Offers.mapper;
 
-import com.example.promotionservice.api.dto.*;
-import com.example.promotionservice.domain.Promotion;
+import com.example.Offers.dto.*;
+import com.example.Offers.entity.Promotion;
 
 public final class PromotionMapper {
     private PromotionMapper() {}

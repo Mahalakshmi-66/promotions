@@ -1,8 +1,8 @@
-package com.example.promotionservice.api;
+package com.example.Offers.controller;
 
-import com.example.promotionservice.api.dto.PromotionRequest;
-import com.example.promotionservice.api.dto.PromotionResponse;
-import com.example.promotionservice.service.PromotionService;
+import com.example.Offers.dto.PromotionRequest;
+import com.example.Offers.dto.PromotionResponse;
+import com.example.Offers.service.PromotionService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -55,4 +55,4 @@ public class PromotionController {
         service.delete(id);
     }
 }
-``
+ 

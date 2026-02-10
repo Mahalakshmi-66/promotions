@@ -1,7 +1,7 @@
-package com.example.OfferService.api;
+package com.example.Offers.controller;
 
-import com.example.offerservice.api.dto.*;
-import com.example.offerservice.service.OfferService;
+import com.example.Offers.dto.*;
+import com.example.Offers.service.OfferService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -26,7 +26,7 @@ public class OfferController {
         return service.list(q, pageable);
     }
 
-   id}")
+    @GetMapping("/{id}")
     public OfferResponse get(@PathVariable Long id) {
         return service.getById(id);
     }

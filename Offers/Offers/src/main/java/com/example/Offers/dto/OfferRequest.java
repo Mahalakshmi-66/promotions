@@ -1,4 +1,4 @@
-package com.example.offerservice.api.dto;
+package com.example.Offers.dto;
 
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;

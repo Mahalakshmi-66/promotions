@@ -1,7 +1,7 @@
-package com.example.offerservice.api.mapper;
+package com.example.Offers.mapper;
 
-import com.example.offerservice.api.dto.*;
-import com.example.offerservice.domain.Offer;
+import com.example.Offers.dto.*;
+import com.example.Offers.entity.Offer;
 
 public class OfferMapper {
 

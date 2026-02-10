@@ -1,6 +1,6 @@
-package com.example.promotionservice.repository;
+package com.example.Offers.repository;
 
-import com.example.promotionservice.domain.Promotion;
+import com.example.Offers.entity.Promotion;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
