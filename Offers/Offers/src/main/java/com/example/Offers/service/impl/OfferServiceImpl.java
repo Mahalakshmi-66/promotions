@@ -5,8 +5,8 @@ import com.example.Offers.mapper.OfferMapper;
 import com.example.Offers.entity.Offer;
 import com.example.Offers.repository.OfferRepository;
 import com.example.Offers.service.OfferService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,12 +22,12 @@ public class OfferServiceImpl implements OfferService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<OfferResponse> list(String q, Pageable pageable) {
-        Page<Offer> page = (q == null || q.isBlank())
-                ? repo.findAll(pageable)
-                : repo.findByTitleContainingIgnoreCaseOrCategoryContainingIgnoreCase(q, q, pageable);
+    public List<OfferResponse> list(String q) {
+        List<Offer> list = (q == null || q.isBlank())
+                ? repo.findAll()
+                : repo.findByTitleContainingIgnoreCaseOrCategoryContainingIgnoreCase(q, q);
 
-        return page.map(OfferMapper::toResponse);
+        return list.stream().map(OfferMapper::toResponse).collect(Collectors.toList());
     }
 
     @Override

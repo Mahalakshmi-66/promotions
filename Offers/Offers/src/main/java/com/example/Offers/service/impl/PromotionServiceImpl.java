@@ -6,8 +6,8 @@ import com.example.Offers.mapper.PromotionMapper;
 import com.example.Offers.entity.Promotion;
 import com.example.Offers.repository.PromotionRepository;
 import com.example.Offers.service.PromotionService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,12 +23,12 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<PromotionResponse> list(String q, Pageable pageable) {
-        Page<Promotion> page = (q == null || q.isBlank())
-                ? repository.findAll(pageable)
-                : repository.findByTitleContainingIgnoreCaseOrCategoryContainingIgnoreCase(q, q, pageable);
+    public List<PromotionResponse> list(String q) {
+        List<Promotion> list = (q == null || q.isBlank())
+                ? repository.findAll()
+                : repository.findByTitleContainingIgnoreCaseOrCategoryContainingIgnoreCase(q, q);
 
-        return page.map(PromotionMapper::toResponse);
+        return list.stream().map(PromotionMapper::toResponse).collect(Collectors.toList());
     }
 
     @Override

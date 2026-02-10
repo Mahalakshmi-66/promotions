@@ -3,9 +3,7 @@ package com.example.Offers.controller;
 import com.example.Offers.dto.*;
 import com.example.Offers.service.OfferService;
 import jakarta.validation.Valid;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +18,8 @@ public class OfferController {
     }
 
     @GetMapping
-    public Page<OfferResponse> list(
-            @RequestParam(required = false) String q,
-            @PageableDefault(size = 10) Pageable pageable) {
-        return service.list(q, pageable);
+    public List<OfferResponse> list(@RequestParam(required = false) String q) {
+        return service.list(q);
     }
 
     @GetMapping("/{id}")

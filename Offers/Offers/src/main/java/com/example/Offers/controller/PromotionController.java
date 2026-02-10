@@ -4,9 +4,7 @@ import com.example.Offers.dto.PromotionRequest;
 import com.example.Offers.dto.PromotionResponse;
 import com.example.Offers.service.PromotionService;
 import jakarta.validation.Valid;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,10 +20,8 @@ public class PromotionController {
 
     // GET /api/promotions?q=electronics&page=0&size=10&sort=title,asc
     @GetMapping
-    public Page<PromotionResponse> list(
-            @RequestParam(value = "q", required = false) String q,
-            @PageableDefault(size = 10, sort = "id") Pageable pageable) {
-        return service.list(q, pageable);
+    public List<PromotionResponse> list(@RequestParam(value = "q", required = false) String q) {
+        return service.list(q);
     }
 
     // GET /api/promotions/{id}
